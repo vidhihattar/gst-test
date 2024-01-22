@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+body {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(214, 225, 252, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.not-found {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.not-found img {
+  width: 300px;
+
+}
+
+.bread-crumbs {
+  align-self: flex-start;
+  margin: 20px 0 0 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.bread-crumbs a {
+
+  color: black;
+  text-decoration: none;
+}
+
+
+
+
+h2 {
+  margin: 0;
+}
+
+
+.gst-checker-cont {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.gst-checker-cont {
+  .left {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+
+  .right {
+    width: fit-content;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.searchBar {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+
+}
+
+#searchQueryInput {
+  width: 100%;
+  height: 2.8rem;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-top: 1px solid white;
+  border-radius: 1.625rem;
+  padding: 0 3.5rem 0 1.5rem;
+  font-size: 1rem;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.42);
+
+}
+
+#searchQuerySubmit {
+  width: 3.5rem;
+  height: 2.8rem;
+  margin-left: -3.5rem;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+#searchQuerySubmit:hover {
+  cursor: pointer;
+}
+
+.gst-output-cont {
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.gst-output-cont h1 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gst-output-cont {
+
+
+  .top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .top-bar>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+  .top-bar>div>p {
+    font-size: 12px;
+    font-weight: bold;
+
+    color: gray;
+
+  }
+
+  .top-bar>div>div {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: gray;
+  }
+
+  .card {
+    width: 100%;
+    background-color: #f5f8fb;
+    padding: 20px;
+    -webkit-box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 6px 11px 0px rgba(0, 0, 0, 0.42);
+    margin-bottom: 50px;
+  }
+
+  .card-top {
+    padding-bottom: 20px;
+    font-size: small;
+    font-weight: bold;
+  }
+
+  .card-mid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-mid>div {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 20px;
+  }
+
+  .card-mid>div>div {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    align-items: center;
+  }
+
+
+  .vr {
+    height: 70%;
+    width: 3px;
+    background-color: #d6dee7;
+    margin-right: 20px;
+  }
+
+  .label {
+    font-size: .625rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #768aa1;
+    margin: 10px 0 0 0;
+  }
+
+  .label-op {
+    font-size: 15px;
+    margin: 10px 0 10px;
+  }
+
+  .card-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .card-bottom button {
+    width: 80px;
+    height: 30px;
+    background-color: transparent;
+    border: solid #24A0ED;
+    border-radius: 2px;
+    color: #24A0ED;
+
+  }
+
+
+}
+
+@media screen and (max-width: 1280px) {
+
+  .gst-checker-cont {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  .gst-checker-cont .left {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .gst-checker-cont .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gst-output-cont {
+    width: 80%;
+
+  }
+
+  .gst-output-cont .top-bar {
+    flex-direction: column;
+  }
+
+
+  .gst-output-cont .card-mid>div {
+
+    flex-direction: column;
+
+  }
+
+  .gst-output-cont .card-mid>div>div {
+
+    width: 100%;
+
+  }
+
+  .not-found img {
+    max-width: 50%;
+    height: auto;
+    width: auto\9;
   }
 }
